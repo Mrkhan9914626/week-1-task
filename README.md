@@ -1,5 +1,9 @@
 # Week 1 — Agentic Assistant with Tool Use
 
+## Live App
+
+Deployed at: [https://week-1-task-2jym6t94xuygymxn8iawdf.streamlit.app/](https://week-1-task-2jym6t94xuygymxn8iawdf.streamlit.app/)
+
 ## Objective
 Build a Streamlit-based AI assistant using the OpenAI Agents SDK that responds to user queries by invoking three tools: calculator, weather lookup (OpenWeatherMap), and web search (Tavily). The agent uses Gemini 3.1 Flash Lite via an OpenAI-compatible endpoint while leveraging the OpenAI Agents SDK for tool orchestration.
 
