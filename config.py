@@ -5,10 +5,20 @@ load_dotenv()
 
 
 def get_env_or_raise(key: str) -> str:
+    # Try streamlit secrets first (for Streamlit Cloud)
+    try:
+        import streamlit as st
+        if hasattr(st, 'secrets') and key in st.secrets:
+            return st.secrets[key]
+    except (ImportError, AttributeError):
+        pass
+
+    # Fall back to environment variables (for local development)
     value = os.getenv(key)
     if not value:
         raise ValueError(
-            f"{key} is not set. Add it to your .env file or set it as an environment variable."
+            f"{key} is not set. For local development, add it to your .env file. "
+            f"For Streamlit Cloud, add it to your app's secrets in the Streamlit Cloud dashboard."
         )
     return value
 
