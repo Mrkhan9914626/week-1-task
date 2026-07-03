@@ -12,3 +12,9 @@ wheels/
 .context7.env
 .claude
 .streamlit
+
+# IDE config
+.mcp.json
+
+# Large binary files
+AlgoHub_AI_Agents_Automation_Internship.pdf
