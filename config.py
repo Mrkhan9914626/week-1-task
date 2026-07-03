@@ -23,6 +23,7 @@ def get_env_or_raise(key: str) -> str:
     return value
 
 
+GEMINI_API_KEY = get_env_or_raise("GEMINI_API_KEY")
 OPENAI_API_KEY = get_env_or_raise("OPENAI_API_KEY")
 WEATHER_API_KEY = get_env_or_raise("WEATHER_API_KEY")
 TAVILY_API_KEY = get_env_or_raise("TAVILY_API_KEY")

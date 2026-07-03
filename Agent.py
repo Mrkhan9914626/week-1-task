@@ -1,9 +1,9 @@
 from agents import Agent, Runner, RunResult, OpenAIChatCompletionsModel
 from openai import AsyncOpenAI
-import os
+from config import GEMINI_API_KEY
 from tools import calculate, get_weather, search_web
 
-api_key=os.getenv("GEMINI_API_KEY")
+api_key = GEMINI_API_KEY
 
 external_client = AsyncOpenAI(
     base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
